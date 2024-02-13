@@ -60,6 +60,13 @@ export const acalaRouteConfigs = createRouteConfigs("acala", [
   },
   {
     to: "parallel",
+    token: "AUSD",
+    xcm: {
+      fee: { token: "AUSD", amount: "700000" },
+    },
+  },
+  {
+    to: "parallel",
     token: "LDOT",
     xcm: {
       fee: { token: "LDOT", amount: "96000000" },
@@ -146,7 +153,21 @@ export const acalaRouteConfigs = createRouteConfigs("acala", [
     to: "statemint",
     token: "USDT",
     xcm: {
-      fee: { token: "USDT", amount: "700000" },
+      fee: { token: "DOT", amount: "100000000" },
+    },
+  },
+  {
+    to: "statemint",
+    token: "USDC",
+    xcm: {
+      fee: { token: "DOT", amount: "100000000" },
+    },
+  },
+  {
+    to: "statemint",
+    token: "PINK",
+    xcm: {
+      fee: { token: "DOT", amount: "100000000" },
     },
   },
 ]);
@@ -200,5 +221,17 @@ export const acalaTokensConfig: Record<string, BasicToken> = {
     symbol: "USDT",
     decimals: 6,
     ed: "700000",
+  },
+  USDC: {
+    name: "USDC",
+    symbol: "USDC",
+    decimals: 6,
+    ed: "10000",
+  },
+  PINK: {
+    name: "PINK",
+    symbol: "PINK",
+    decimals: 10,
+    ed: "1000000000",
   },
 };

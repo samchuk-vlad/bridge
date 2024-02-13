@@ -87,7 +87,8 @@ export interface InputConfig {
   maxInput: FixedPointNumber;
   ss58Prefix: number;
   destFee: TokenBalance;
-  estimateFee: string;
+  estimateFee: TokenBalance;
+  xcmFee: TokenBalance | null;
 }
 
 export interface RouterFilter {
